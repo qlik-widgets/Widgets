@@ -1,0 +1,71 @@
+<style>@mainColor: {{settings.color}};
+@secondaryColor: darken(@mainColor,3%) ;
+@borderColor: darken(@mainColor, 5%);
+ 
+
+/* --------------------------------------------------------------- */
+.tile {
+    border-style:solid;
+    border-color:@borderColor;
+    border-width:1px;
+    min-height:100px;
+    font-family:Arial;
+}
+
+.title hovercss {
+	font-size:1.2em;
+  }
+  &:hover {
+	hovercss {
+	  font-size:1.05em;
+	}
+  }
+
+.tile .icoCol {
+    background-color: @mainColor;
+    color:#fff;
+    text-align:center;
+    font-size:6em;
+    min-width:120px;
+}
+
+.tile .valCol {
+    text-align:center;
+    color:@secondaryColor;
+    width:99%;
+}
+
+.tile .title {
+   font-size:3em;
+   font-weight:bold;
+   margin-top:12px;
+}
+
+.tile .subtitle {
+   font-size:1.9em;
+   font-weight:normal;
+   margin-bottom:5px;
+}
+
+.tile .footnote {
+   font-size:0.75em;
+   margin-bottom:0px;
+}</style>
+<div><div><table class="tile">
+    <tbody>
+    <tr>
+	<td><div class="icoCol"><span class="lui-icon lui-icon lui-icon--{{settings.icon1}}" style="color:#ffffff;font-size:90px;"></span></div></td>
+        <td class="valCol">
+  		<hovercss>
+            <div class="title">{{data.rows[0].measures[0].qText}}</div>
+            <div class="subtitle">{{data.headers[0].qFallbackTitle}}</div>
+            <div class="footnote">{{settings.measurefoot}}</div>
+		</hovercss>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+</div>
+
+</div>

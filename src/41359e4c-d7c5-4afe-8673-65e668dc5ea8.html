@@ -1,0 +1,56 @@
+<style>table.wiTable {
+    border: 1px solid silver;
+    border-collapse: collapse;
+    border-radius: 10px;
+	margin-top:10px;
+	margin-right:10px;
+	margin-left:10px;
+	width:98%;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+
+table.wiTable thead tr td {
+    background-color:#ccc;
+    font-weight:bold;
+}
+
+table.wiTable tr {
+    border-bottom: 1px solid silver;
+}
+table.wiTable tr td {
+    border-right: 1px solid silver;
+    padding: 5px;
+}
+table.wiTable tbody tr:hover {
+    cursor:pointer;
+    background-color:#808080 !important;
+    color:#efefef;
+}
+
+table.wiTable tbody tr:nth-child(even) {
+  background: #efefef;
+}
+
+table.wiTable tbody tr:nth-child(odd) {
+  background: #FFF;
+}</style>
+<div><div ng-show="layout.qHyperCube.qDataPages[0].qMatrix.length == 0">
+    No Dimensions and Measures added to this object.<br>
+    Otherwise you'd see here the table.
+</div>
+<table class="wiTable">
+  <thead>
+    <tr>
+	  <td ng-repeat="dim in layout.qHyperCube.qDimensionInfo">{{dim.qFallbackTitle}}</td>
+      <td ng-repeat="mea in layout.qHyperCube.qMeasureInfo" ng-bind="mea.qFallbackTitle"></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="row in layout.qHyperCube.qDataPages[0].qMatrix">
+      <td ng-repeat="col in row">
+        {{col.qText}}
+      </td>
+    </tr>
+  </tbody>
+</table></div>

@@ -1,0 +1,83 @@
+<style>.list ul {
+	margin-top:40px;
+	margin-left: 30px;
+	text-align: left;
+	color: Green;
+	cursor: pointer;
+	li:hover {
+		text-decoration: underline;
+	}
+	li:active {
+		color: orange;
+	}
+}
+
+.content {
+	padding: 10px 20px 10px 20px;
+	margin-top: 20px;
+	border-radius: 5px;
+	border: 1px #efefef solid;
+	
+	> div {
+		font-weight: bold;
+	}
+}
+
+.kpi{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: Green;
+  font-size:17pt;
+  font-style: italic;
+  text-transform: Capitalize;
+}</style>
+<div><div><table>
+<tbody><tr>
+  <th>
+	<div class="list" ng-init="settings.what='container1'">
+		<ul>
+			<li ng-click="settings.what = 'container1'">{{data.headers[0].qFallbackTitle}}</li>
+			<li ng-click="settings.what = 'container2'">{{data.headers[1].qFallbackTitle}}</li>
+			<li ng-click="settings.what = 'container3'">{{data.headers[2].qFallbackTitle}}</li>
+		</ul>
+	</div>
+  </th>
+
+  <th>
+	  <div class="content">
+
+		  <div ng-if="settings.what === 'container1'">
+
+			<div class="kpi">
+			{{data.headers[0].qFallbackTitle}}<br>
+			{{data.rows[0].measures[0].qText}}
+			</div>
+
+		  </div>
+
+		  <div ng-if="settings.what === 'container2'">
+
+		  <div class="kpi">
+		  {{data.headers[1].qFallbackTitle}}<br>
+		  {{data.rows[0].measures[1].qText}}
+		  </div>
+
+		  </div>
+
+		  <div ng-if="settings.what === 'container3'">
+
+		  <div class="kpi">
+		  {{data.headers[2].qFallbackTitle}}<br>
+		  {{data.rows[0].measures[2].qText}}
+		  </div>
+
+		  </div>
+
+	  </div>
+
+  </th>
+
+</tr>
+</tbody></table>
+</div></div>

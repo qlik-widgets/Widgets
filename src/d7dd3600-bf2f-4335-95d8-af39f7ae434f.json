@@ -1,0 +1,267 @@
+{
+  "name": "KPIs with Table",
+  "description": "",
+  "author": "Rishi beri",
+  "library": "widgets",
+  "meta": {
+    "type": "table"
+  },
+  "properties": {
+    "measures": {
+      "min": 1,
+      "max": 4
+    },
+    "dimensions": {
+      "max": 2,
+      "min": 1
+    },
+    "sections": [
+      {
+        "type": "header",
+        "order": 0,
+        "parent": "qw-pe-dropzone1-0",
+        "ref": "header1",
+        "label": "Settings"
+      }
+    ],
+    "settings": [
+      {
+        "component": "dropdown",
+        "type": "string",
+        "defaultValue": "#5F6062",
+        "options": [
+          {
+            "label": "Green",
+            "value": "#6cb33f"
+          },
+          {
+            "label": "White",
+            "value": "#ffffff"
+          },
+          {
+            "label": "Dark Gray",
+            "value": "#5F6062"
+          },
+          {
+            "label": "Light Gray",
+            "value": "#9fa1a4"
+          },
+          {
+            "label": "Medium Gray",
+            "value": "#7e8083"
+          },
+          {
+            "label": "Orange",
+            "value": "#f8981d"
+          },
+          {
+            "label": "Gold",
+            "value": "#ffc72c"
+          },
+          {
+            "label": "Lime Green",
+            "value": "#c4d600"
+          },
+          {
+            "label": "Dark Green",
+            "value": "#4c8c2b"
+          },
+          {
+            "label": "Blue",
+            "value": "#0066cc"
+          }
+        ],
+        "order": 5,
+        "parent": "header1",
+        "ref": "Measurebgcolor",
+        "label": "Background Color"
+      },
+      {
+        "component": "dropdown",
+        "type": "string",
+        "defaultValue": "#ffc72c",
+        "options": [
+          {
+            "label": "Green",
+            "value": "#6cb33f"
+          },
+          {
+            "label": "White",
+            "value": "#ffffff"
+          },
+          {
+            "label": "Dark Gray",
+            "value": "#5F6062"
+          },
+          {
+            "label": "Light Gray",
+            "value": "#9fa1a4"
+          },
+          {
+            "label": "Medium Gray",
+            "value": "#7e8083"
+          },
+          {
+            "label": "Orange",
+            "value": "#f8981d"
+          },
+          {
+            "label": "Gold",
+            "value": "#ffc72c"
+          },
+          {
+            "label": "Lime Green",
+            "value": "#c4d600"
+          },
+          {
+            "label": "Dark Green",
+            "value": "#4c8c2b"
+          },
+          {
+            "label": "Blue",
+            "value": "#0066cc"
+          }
+        ],
+        "order": 6,
+        "parent": "header1",
+        "ref": "measurecolor",
+        "label": "Measure Color"
+      },
+      {
+        "component": "dropdown",
+        "type": "string",
+        "defaultValue": "bookmark",
+        "options": [
+          {
+            "label": "Bookmark",
+            "value": "bookmark"
+          },
+          {
+            "label": "Tag",
+            "value": "tag"
+          },
+          {
+            "label": "Warning",
+            "value": "warning"
+          },
+          {
+            "label": "Person",
+            "value": "person"
+          }
+        ],
+        "order": 1,
+        "parent": "header1",
+        "ref": "icon1",
+        "label": "Icon 1"
+      },
+      {
+        "component": "dropdown",
+        "type": "string",
+        "defaultValue": "tag",
+        "options": [
+          {
+            "label": "Bookmark",
+            "value": "bookmark"
+          },
+          {
+            "label": "Tag",
+            "value": "tag"
+          },
+          {
+            "label": "Warning",
+            "value": "warning"
+          },
+          {
+            "label": "Person",
+            "value": "person"
+          }
+        ],
+        "order": 2,
+        "parent": "header1",
+        "ref": "icon2",
+        "label": "Icon 2"
+      },
+      {
+        "component": "dropdown",
+        "type": "string",
+        "defaultValue": "warning",
+        "options": [
+          {
+            "label": "Bookmark",
+            "value": "bookmark"
+          },
+          {
+            "label": "Tag",
+            "value": "tag"
+          },
+          {
+            "label": "Warning",
+            "value": "warning"
+          },
+          {
+            "label": "Person",
+            "value": "person"
+          }
+        ],
+        "order": 3,
+        "parent": "header1",
+        "ref": "icon3",
+        "label": "Icon 3"
+      },
+      {
+        "component": "dropdown",
+        "type": "string",
+        "defaultValue": "person",
+        "options": [
+          {
+            "label": "Bookmark",
+            "value": "bookmark"
+          },
+          {
+            "label": "Tag",
+            "value": "tag"
+          },
+          {
+            "label": "Warning",
+            "value": "warning"
+          },
+          {
+            "label": "Person",
+            "value": "person"
+          }
+        ],
+        "order": 4,
+        "parent": "header1",
+        "ref": "icon4",
+        "label": "Icon 4"
+      },
+      {
+        "component": "dropdown",
+        "type": "string",
+        "defaultValue": "15",
+        "options": [
+          {
+            "label": "10 PT",
+            "value": "10"
+          },
+          {
+            "label": "15 PT",
+            "value": "15"
+          },
+          {
+            "label": "20 PT",
+            "value": "20"
+          },
+          {
+            "label": "25 PT",
+            "value": "25"
+          }
+        ],
+        "order": 0,
+        "parent": "header1",
+        "ref": "iconsize",
+        "label": "Icon Size"
+      }
+    ]
+  }
+}

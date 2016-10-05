@@ -1,0 +1,48 @@
+{
+  "name": "KPI List Table",
+  "description": "",
+  "author": "Rishi Beri",
+  "library": "widgets",
+  "meta": {
+    "type": "kpi"
+  },
+  "properties": {
+    "measures": {
+      "min": 1,
+      "max": 5
+    },
+    "dimensions": {
+      "max": 0,
+      "min": 0
+    },
+    "sections": [
+      {
+        "type": "header",
+        "order": 0,
+        "parent": "qw-pe-dropzone1-0",
+        "ref": "header1",
+        "label": "Settings"
+      }
+    ],
+    "settings": [
+      {
+        "type": "string",
+        "expression": "optional",
+        "defaultValue": "Header",
+        "order": 0,
+        "parent": "header1",
+        "ref": "property1",
+        "label": "Property1"
+      },
+      {
+        "type": "string",
+        "expression": "optional",
+        "defaultValue": "Value",
+        "order": 1,
+        "parent": "header1",
+        "ref": "property2",
+        "label": "Property2"
+      }
+    ]
+  }
+}

@@ -1,0 +1,128 @@
+<style>@color: {{settings.measurecolor}};
+@bgcolor: {{settings.Measurebgcolor}};
+.content {
+	padding: 5px 10px 5px 10px;
+	margin-top: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+	border-radius: 20px;
+	border: 1px #efefef solid;
+	background-color:@bgcolor;
+}
+
+.kpi{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: @color;
+  
+  font-size:17pt;
+  font-style: italic;
+  font-weight: bold;
+  text-transform: Capitalize;
+}
+////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////
+
+table.wiTable {
+    border: 1px solid silver;
+    border-collapse: collapse;
+    border-radius: 10px;
+	margin-top:50px;
+	margin-right:10px;
+	margin-left:10px;
+	width:98%;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+
+table.wiTable thead tr td {
+    background-color:#ccc;
+    font-weight:bold;
+}
+
+table.wiTable tr {
+    border-bottom: 1px solid silver;
+}
+table.wiTable tr td {
+    border-right: 1px solid silver;
+    padding: 5px;
+}
+table.wiTable tbody tr:hover {
+    cursor:pointer;
+    background-color:#808080 !important;
+    color:#efefef;
+}
+
+table.wiTable tbody tr:nth-child(even) {
+  background: #efefef;
+}
+
+table.wiTable tbody tr:nth-child(odd) {
+  background: #FFF;
+}</style>
+<div><div><div class="content">
+<table>
+<tbody>
+
+  <tr>
+  <td>
+	  <div class="kpi">
+	  <span style="font-size: {{settings.iconsize}}pt" class="lui-icon lui-icon lui-icon--{{settings.icon1}}"></span><br>	  
+	  {{data.headers[1].qFallbackTitle}}<br>
+	  {{layout.qHyperCube.qGrandTotalRow[0].qText}}
+	  </div>
+  </td>
+
+  <td>
+	  <div class="kpi">
+	  <div ng-show="layout.qHyperCube.qMeasureInfo.length >= 2">
+	  <span style="font-size: {{settings.iconsize}}pt" class="lui-icon lui-icon lui-icon--{{settings.icon2}}"></span><br></div>	  
+	  {{data.headers[2].qFallbackTitle}}<br>
+	  {{layout.qHyperCube.qGrandTotalRow[1].qText}}
+	  </div>
+  </td>
+  <td>
+	  <div class="kpi">
+	  <div ng-show="layout.qHyperCube.qMeasureInfo.length >= 3">
+	  <span style="font-size: {{settings.iconsize}}pt" class="lui-icon lui-icon lui-icon--{{settings.icon3}}"></span><br></div>	  
+	  {{data.headers[3].qFallbackTitle}}<br>
+	  {{layout.qHyperCube.qGrandTotalRow[2].qText}}	  
+	  </div>
+  </td>
+    <td>
+	  <div class="kpi">
+	  <div ng-show="layout.qHyperCube.qMeasureInfo.length >= 4">
+	  <span style="font-size: {{settings.iconsize}}pt" class="lui-icon lui-icon lui-icon--{{settings.icon4}}"></span><br></div>	  
+	  {{data.headers[4].qFallbackTitle}}<br>
+	  {{layout.qHyperCube.qGrandTotalRow[3].qText}}	  
+	  </div>
+  </td>
+  </tr>
+</tbody>
+</table>	
+</div>	
+
+
+<div ng-show="layout.qHyperCube.qDataPages[0].qMatrix.length == 0">
+    No Dimensions and Measures added to this object.<br>
+    Otherwise you'd see here the table.
+</div>
+<table class="wiTable">
+  <thead>
+    <tr>
+	  <td ng-repeat="dim in layout.qHyperCube.qDimensionInfo">{{dim.qFallbackTitle}}</td>
+      <td ng-repeat="mea in layout.qHyperCube.qMeasureInfo" ng-bind="mea.qFallbackTitle"></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="row in layout.qHyperCube.qDataPages[0].qMatrix">
+      <td ng-repeat="col in row">
+        {{col.qText}}
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div></div>

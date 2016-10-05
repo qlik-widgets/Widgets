@@ -1,0 +1,21 @@
+{
+  "name": "Formatted Table",
+  "description": "",
+  "author": "Rishi beri",
+  "library": "widgets",
+  "meta": {
+    "type": "table"
+  },
+  "properties": {
+    "measures": {
+      "min": 1,
+      "max": 4
+    },
+    "dimensions": {
+      "max": 2,
+      "min": 1
+    },
+    "sections": [],
+    "settings": []
+  }
+}

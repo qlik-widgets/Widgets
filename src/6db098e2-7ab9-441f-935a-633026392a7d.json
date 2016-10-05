@@ -1,0 +1,156 @@
+{
+  "name": "KPI with Image",
+  "description": "",
+  "author": "Rishi beri",
+  "library": "widgets",
+  "meta": {
+    "type": "kpi"
+  },
+  "properties": {
+    "measures": {
+      "min": 0,
+      "max": 1
+    },
+    "dimensions": {
+      "max": 0,
+      "min": 0
+    },
+    "sections": [
+      {
+        "type": "header",
+        "order": 0,
+        "parent": "qw-pe-dropzone1-0",
+        "ref": "header1",
+        "label": "Settings"
+      }
+    ],
+    "settings": [
+      {
+        "component": "dropdown",
+        "type": "string",
+        "defaultValue": "#6cb33f",
+        "options": [
+          {
+            "label": "Green",
+            "value": "#6cb33f"
+          },
+          {
+            "label": "White",
+            "value": "#ffffff"
+          },
+          {
+            "label": "Dark Gray",
+            "value": "#5F6062"
+          },
+          {
+            "label": "Light Gray",
+            "value": "#9fa1a4"
+          },
+          {
+            "label": "Medium Gray",
+            "value": "#7e8083"
+          },
+          {
+            "label": "Orange",
+            "value": "#f8981d"
+          },
+          {
+            "label": "Gold",
+            "value": "#ffc72c"
+          },
+          {
+            "label": "Lime Green",
+            "value": "#c4d600"
+          },
+          {
+            "label": "Dark Green",
+            "value": "#4c8c2b"
+          },
+          {
+            "label": "Blue",
+            "value": "#0066cc"
+          }
+        ],
+        "order": 1,
+        "parent": "header1",
+        "ref": "color",
+        "label": "Color"
+      },
+      {
+        "component": "dropdown",
+        "type": "string",
+        "defaultValue": "bookmark",
+        "options": [
+          {
+            "label": "Bookmark",
+            "value": "bookmark"
+          },
+          {
+            "label": "Tag",
+            "value": "tag"
+          },
+          {
+            "label": "Warning",
+            "value": "warning"
+          },
+          {
+            "label": "Person",
+            "value": "person"
+          },
+          {
+            "label": "Sheet",
+            "value": "sheet"
+          },
+          {
+            "label": "Object",
+            "value": "object"
+          },
+          {
+            "label": "Image",
+            "value": "image"
+          },
+          {
+            "label": "Help",
+            "value": "help"
+          },
+          {
+            "label": "Info",
+            "value": "info"
+          },
+          {
+            "label": "Group",
+            "value": "group"
+          },
+          {
+            "label": "Remove",
+            "value": "remove"
+          },
+          {
+            "label": "Bar",
+            "value": "bar-chart"
+          },
+          {
+            "label": "Line",
+            "value": "line-chart"
+          },
+          {
+            "label": "Plus",
+            "value": "plus"
+          },
+          {
+            "label": "Minus",
+            "value": "minus"
+          },
+          {
+            "label": "Home",
+            "value": "home"
+          }
+        ],
+        "order": 0,
+        "parent": "header1",
+        "ref": "icon1",
+        "label": "Icon 1"
+      }
+    ]
+  }
+}
